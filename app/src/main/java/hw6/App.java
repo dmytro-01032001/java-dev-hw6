@@ -5,24 +5,28 @@ package hw6;
 
 import java.io.IOException;
 
+import hw6.model.OldestYoungestWorker;
+import hw6.model.ProjectPrice;
+import hw6.service.DatabaseQueryService;
+
 public class App {
     public static void main(String[] args) {
         // Database.getConnection();
         // DatabaseInitService.main(args);
         // DatabasePopulateService.main(args);
-        try{
+        try {
             System.out.println(DatabaseQueryService.findLongestProject());
             System.out.println(DatabaseQueryService.findMaxProjectsClient());
             System.out.println(DatabaseQueryService.findMaxSalaryWorker());
             // System.out.println(DatabaseQueryService.findOldestYoungestWorker());
-            for(OldestYoungestWorker w:DatabaseQueryService.findOldestYoungestWorker()){
+            for (OldestYoungestWorker w:DatabaseQueryService.findOldestYoungestWorker()) {
                 System.out.println(w);
             }
             // System.out.println(DatabaseQueryService.getProjectPrices());
-            for(ProjectPrice p: DatabaseQueryService.getProjectPrices()){
+            for (ProjectPrice p: DatabaseQueryService.getProjectPrices()) {
                 System.out.println(p);
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

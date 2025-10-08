@@ -14,15 +14,15 @@ public class Database {
         String pswd = PropertyReader.getPassword();
         try {
             connection = DriverManager.getConnection(url, user, pswd);
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.toString());
         }
     }
-    static Database getInstance(){
+    public static Database getInstance() {
         return INSTANCE;
     }
 
-    static Connection getConnection(){
+    public static Connection getConnection() {
         return connection;
     }
 }

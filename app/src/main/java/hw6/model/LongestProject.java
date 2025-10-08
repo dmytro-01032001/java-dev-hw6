@@ -1,4 +1,4 @@
-package hw6;
+package hw6.model;
 
 public class LongestProject {
     private int id;
@@ -35,7 +35,7 @@ public class LongestProject {
         this.monthCount = monthCount;
     }
 
-    public String toString(){
+    public String toString() {
         return String.format("id: %d, name: %s, monthCount: %d", id, name, monthCount);
     }
 

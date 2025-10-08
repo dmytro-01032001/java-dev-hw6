@@ -1,4 +1,4 @@
-package hw6;
+package hw6.model;
 
 public class MaxProjectCountClient {
     private int id;
@@ -29,7 +29,7 @@ public class MaxProjectCountClient {
         this.projectCount = projectCount;
     }
 
-    public String toString(){
+    public String toString() {
         return String.format("id: %d, name: %s, projectCount: %d", id, name, projectCount);
     }
 }

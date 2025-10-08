@@ -7,12 +7,12 @@ import java.util.Properties;
 
 public class PropertyReader {
 
-    private static Properties loadProp(){
-        try(InputStream input = PropertyReader.class.getClassLoader().getResourceAsStream("app.properties")){
+    private static Properties loadProp() {
+        try (InputStream input = PropertyReader.class.getClassLoader().getResourceAsStream("app.properties")) {
 
             Properties prop = new Properties();
 
-            if(input == null){
+            if(input == null) {
                 System.out.println("Error: cannot read app.properties");
                 return null;
             }
@@ -21,13 +21,13 @@ public class PropertyReader {
 
             return prop;
 
-        } catch(IOException e){
+        } catch(IOException e) {
             e.printStackTrace();
             return null;
         }
     }
     
-    static String getUrl(){
+    static String getUrl() {
 
         Properties prop = loadProp();
 
@@ -42,12 +42,12 @@ public class PropertyReader {
 
     }
 
-    static String getUser(){
+    static String getUser() {
             Properties prop = loadProp();
             return prop.getProperty("postgres.db.user");
     }
 
-    static String getPassword(){
+    static String getPassword() {
         Properties prop = loadProp();
         return prop.getProperty("postgres.db.password");
     }

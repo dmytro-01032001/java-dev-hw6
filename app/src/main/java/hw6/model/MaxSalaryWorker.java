@@ -1,4 +1,4 @@
-package hw6;
+package hw6.model;
 
 public class MaxSalaryWorker {
     private String name;
@@ -8,7 +8,7 @@ public class MaxSalaryWorker {
         this.salary = salary;
     }
 
-    public String toString(){
+    public String toString() {
         return String.format("name: %s, salary: %d", name, salary);
     }
 }

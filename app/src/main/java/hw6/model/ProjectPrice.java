@@ -1,4 +1,4 @@
-package hw6;
+package hw6.model;
 
 public class ProjectPrice {
     private String name;
@@ -8,7 +8,7 @@ public class ProjectPrice {
         this.price = price;
     }
 
-    public String toString(){
+    public String toString() {
         return String.format("name: %s, price: %d", name, price);
     }
 }

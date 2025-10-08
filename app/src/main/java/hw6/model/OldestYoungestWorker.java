@@ -1,4 +1,4 @@
-package hw6;
+package hw6.model;
 
 public class OldestYoungestWorker {
     private String type;
@@ -9,7 +9,7 @@ public class OldestYoungestWorker {
         this.name = name;
         this.birthday = birthday;
     }
-    public String toString(){
+    public String toString() {
         return String.format("type: %s, name: %s, birthday: %s", type, name, birthday);
     }
 }
